@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack_Scala/src/main/scala/BlackJack_Scala/main.scala:81:17: not found: value out[0m
+[0m[[0m[31merror[0m] [0m[0m                out.println("Player wins!");[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack_Scala/src/main/scala/BlackJack_Scala/main.scala:82:17: not found: value out[0m
+[0m[[0m[31merror[0m] [0m[0m                out.println("Blackjack!");[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
