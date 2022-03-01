@@ -1,8 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:8:15: not found: type LIstBuffer[0m
-[0m[[0m[31merror[0m] [0m[0m    val cards:LIstBuffer[String] = ListBuffer("A","A","A")[0m
-[0m[[0m[31merror[0m] [0m[0m              ^[0m
-[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:9:30: not enough arguments for method compute_score: (cards_list: scala.collection.mutable.ListBuffer[String])Int.[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter cards_list.[0m
-[0m[[0m[31merror[0m] [0m[0m    assert(Game.compute_score() == 13)[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:122:41: Int does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m        val len1= Game.player_cards.size();[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:126:41: Int does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m        val len2= Game.dealer_cards.size();[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
 [0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

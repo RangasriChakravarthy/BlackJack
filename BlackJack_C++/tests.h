@@ -4,7 +4,6 @@
 using namespace std;
 
 class Tests {
-
 public:
     int test_output;
     vector<string> test_cards;
@@ -186,7 +185,7 @@ public:
 
     }
 
-    void run_test(){
+    void test_score_compute(){
         test1();
         test2();
         test3();

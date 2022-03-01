@@ -13,18 +13,14 @@ object Deck {
 var ordered_cards:ListBuffer[String] = ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10",
 								"A", "K", "Q", "J", "2", "3", "4", "5", "6")
 						   	
-
-
  def random_draw(): String = {
    var card = Random.shuffle(ordered_cards).head
    ordered_cards.remove(0)
    card  
   }
-
 }
 
 object Game {
-
 var game_over:Boolean = false
 var player_cards = new ListBuffer[String]()
 var	dealer_cards = new ListBuffer[String]()
@@ -32,7 +28,7 @@ var player_score: Int = 0;
 var dealer_score: Int = 0;
 var player_input_to_continue:Boolean = true;
 
-def deal_initial_player_cards() = {
+    def deal_initial_player_cards() = {
  	
 		val card1 = Deck.random_draw();
     	val card2 = Deck.random_draw();

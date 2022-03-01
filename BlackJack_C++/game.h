@@ -5,10 +5,8 @@
 #include "deck.h"
 
 using namespace std;
-
 class Game {
- 
- public:
+public:
  	Deck deck; 
 	bool game_over = false;
 	vector<string> player_cards;
@@ -17,11 +15,10 @@ class Game {
 	int dealer_score = 0;
 	bool player_input_to_continue = true;
  
-
  	void deal_initial_player_cards(){
  	
-		string card1 = deck.draw();
-        string card2 = deck.draw();
+		string card1 = deck.random_draw();
+        string card2 = deck.random_draw();
 		player_cards.push_back(card1);
 		player_cards.push_back(card2);
 		player_score = compute_score(player_cards);
@@ -29,15 +26,14 @@ class Game {
 
  	void deal_initial_dealer_cards(){
 
- 		string card1 = deck.draw();
-        string card2 = deck.draw();
+ 		string card1 = deck.random_draw();
+        string card2 = deck.random_draw();
 		dealer_cards.push_back(card1);
 		dealer_cards.push_back(card2);
 		dealer_score = compute_score(dealer_cards);
  	}
 
  	int compute_score(vector<string>& cards_list) {
-		
 		int sum_cards=0;
 		int len= cards_list.size();
 	        for(int i=0;i< len;i++){
@@ -53,7 +49,6 @@ class Game {
 				if (cards_list[i] == "A")
 					count = count+1;
 		    }	
-		
 		while((sum_cards > 21) && (count > 0)){
 			sum_cards -= 10;
 			count = count-1;
@@ -88,7 +83,7 @@ class Game {
 				cout << "Would you like to (H)it or (S)tand?"<<endl;
 				cin >> user_choice;
 				if(user_choice == "H") {
-					card = deck.draw();
+					card = deck.random_draw();
 					player_cards.push_back(card);
 					player_score = compute_score(player_cards);
 					if(player_score > 21){
@@ -107,7 +102,6 @@ class Game {
 				}	
 			}
  		}
-
 		while(game_over == false){
                 cout << "Dealer has: ";
 				print_cards(dealer_cards);
@@ -124,7 +118,7 @@ class Game {
             else if(dealer_score < 17){
 					while(dealer_score <= 17) {
 						cout << "Dealer hits" << endl;
-						card = deck.draw();
+						card = deck.random_draw();
 						dealer_cards.push_back(card);
 						dealer_score = compute_score(dealer_cards);
 						cout << "Dealer has : ";
