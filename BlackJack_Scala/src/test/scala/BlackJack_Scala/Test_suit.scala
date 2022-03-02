@@ -11,6 +11,34 @@ class BlackJack_Tester extends FreeSpec {
      assert(test_deal_Cards == true)
    }
 
+   "test_both_blackjack" in {
+     test_both_blackjack
+   }
+
+   "test_dealer_stand_win" in {
+     test_dealer_stand_win
+   }
+
+   "test_player_stand_win" in {
+     test_player_stand_win
+   }
+
+   "test_dealer_bust" in {
+     test_dealer_bust
+   }
+
+   "test_player_tie" in {
+     test_player_tie
+   }
+
+   "test_player_busts" in {
+     test_player_busts
+   }
+
+   "test_player_blackjack" in {
+     test_player_blackjack
+   }
+
    def test_score_compute() : Boolean = {
     val t1 = System.currentTimeMillis()
     //Test1
@@ -125,6 +153,137 @@ class BlackJack_Tester extends FreeSpec {
         val diff= System.currentTimeMillis() - old; // difference in time
         println("Total time for test_deal_Cards : " + diff + " ms")
         true
+    }
+
+    def test_player_blackjack() = {
+        val old= System.currentTimeMillis();
+        Deck.cards = ListBuffer( "7", "7", "7", "7", "7", "7", "7", "7")
+        Game.deal_initial_dealer_cards();
+        Game.deal_initial_player_cards();
+        Game.compute_score(Game.player_cards);
+        Game.compute_score(Game.dealer_cards);
+        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");
+        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("H");
+        val card = Deck.random_draw();
+        Game.player_cards += card
+        Game.player_score = Game.compute_score(Game.player_cards);
+        if(Game.player_score == 21){
+            System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");
+            System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);
+            System.out.println("Player wins!");
+            System.out.println("Blackjack!");
+        }
+        val now= System.currentTimeMillis();
+        val diff= now- old;
+        System.out.println("test_player_blackjack time:" + diff + " ms ");
+    }
+
+    def test_player_busts() = {
+        val old= System.currentTimeMillis();
+        Deck.cards = ListBuffer( "10", "10", "10", "10", "10", "10", "10", "10")
+        Game.deal_initial_dealer_cards();
+        Game.deal_initial_player_cards();
+        Game.compute_score(Game.player_cards);
+        Game.compute_score(Game.dealer_cards);
+        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");
+        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("H");
+        val card = Deck.random_draw();
+        Game.player_cards += card
+        Game.player_score = Game.compute_score(Game.player_cards);
+        if(Game.player_score > 21){
+            System.out.println("Player busts with "+ Game.player_cards + " = " + Game.player_score);
+            System.out.println("Dealer wins");
+        }
+        val now= System.currentTimeMillis();
+        val diff= now- old;
+        System.out.println("test_player_busts time:" + diff + " ms ");
+    }
+
+    def test_player_tie() = {
+        val old= System.currentTimeMillis();
+        Deck.cards = ListBuffer( "10", "10", "10", "10", "10", "10", "10", "10")
+        Game.deal_initial_dealer_cards();
+        Game.deal_initial_player_cards();
+        Game.compute_score(Game.player_cards);
+        Game.compute_score(Game.dealer_cards);
+        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");
+        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);
+        Game.dealer_game();
+        val now= System.currentTimeMillis();
+        val diff= now- old;
+        System.out.println("test_player_tie time:" + diff + " ms ");
+    }
+
+    def test_dealer_bust() = {
+        val old= System.currentTimeMillis();
+        Deck.cards = ListBuffer( "J", "K", "Q","10")
+        Game.player_cards= ListBuffer( "J", "K")
+        Game.dealer_cards= ListBuffer( "10", "5")
+        Game.dealer_score = Game.compute_score(Game.dealer_cards);
+        Game.player_score = Game.compute_score(Game.player_cards);
+        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");
+        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);
+        Game.dealer_game();
+        val now= System.currentTimeMillis();
+        val diff= now- old;
+        System.out.println("test_dealer_bust time: " + diff + " ms ");
+    }
+
+    def test_player_stand_win() = {
+        val old= System.currentTimeMillis();
+        Deck.cards = ListBuffer("J", "K", "Q","10")
+        Game.player_cards= ListBuffer( "J", "K")
+        Game.dealer_cards= ListBuffer( "10", "8")
+        Game.dealer_score = Game.compute_score(Game.dealer_cards);
+        Game.player_score = Game.compute_score(Game.player_cards);
+        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");
+        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);
+        Game.dealer_game();
+        val now= System.currentTimeMillis();
+        val diff= now- old;
+        System.out.println("test_player_stand_win time: " + diff + " ms ");
+    }
+
+    def test_dealer_stand_win() = {
+        val old= System.currentTimeMillis();
+        Game.player_cards= ListBuffer( "8", "K")
+        Game.dealer_cards= ListBuffer( "10", "Q")
+        Game.dealer_score = Game.compute_score(Game.dealer_cards);
+        Game.player_score = Game.compute_score(Game.player_cards);
+        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");
+        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);
+        Game.dealer_game();
+        val now= System.currentTimeMillis();
+        val diff= now- old;
+        System.out.println("test_dealer_stand_win time: " + diff + " ms ");
+    }
+
+    def test_both_blackjack() = {
+        val old= System.currentTimeMillis();
+        Game.player_cards = ListBuffer("A", "K")
+        Game.dealer_cards = ListBuffer("10", "A")
+        Game.dealer_score = Game.compute_score(Game.dealer_cards);
+        Game.player_score = Game.compute_score(Game.player_cards);
+        Game.player_game();
+        val now= System.currentTimeMillis();
+        val diff= now- old;
+        System.out.println("test_both_blackjack time: " + diff + " ms ");
     }
 }
 
