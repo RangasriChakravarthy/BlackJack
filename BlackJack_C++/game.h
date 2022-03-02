@@ -62,7 +62,7 @@ public:
 		}
 	}
 
- 	void run_game() {
+ 	void player_game() {
 		string user_choice;
 		string card;
 		while((player_input_to_continue == true) && (game_over == false)){
@@ -79,7 +79,7 @@ public:
 				cout << "Dealer has : " << dealer_cards[0] << " ? = ?" << endl;
 				cout << "Player has : ";
 				print_cards(player_cards);
-				cout << " " << player_score << " " << endl;
+				cout << " = " << player_score << " " << endl;
 				cout << "Would you like to (H)it or (S)tand?"<<endl;
 				cin >> user_choice;
 				if(user_choice == "H") {
@@ -102,7 +102,12 @@ public:
 				}	
 			}
  		}
-		while(game_over == false){
+		dealer_game();
+	 }
+
+	 void dealer_game() {
+		 string card;
+		 while(game_over == false){
                 cout << "Dealer has: ";
 				print_cards(dealer_cards);
 				cout << " = " << dealer_score << endl;

@@ -9,6 +9,6 @@ int main()
 	Game g;
 	g.deal_initial_dealer_cards();
 	g.deal_initial_player_cards();
-	g.run_game();
+	g.player_game();
 	return 0;
 }

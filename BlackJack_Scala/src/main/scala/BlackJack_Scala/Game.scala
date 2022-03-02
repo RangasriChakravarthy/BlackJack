@@ -68,7 +68,7 @@ var player_input_to_continue:Boolean = true;
 		sum_cards
    }
 
-   def run_game() = {
+   def player_game() = {
 	   	while(player_input_to_continue == true && game_over == false){
             println("")
             if(player_score == 21){
@@ -99,7 +99,11 @@ var player_input_to_continue:Boolean = true;
                 }
             }
         }
-        while (game_over == false){
+        dealer_game();
+   }
+
+   def dealer_game() = {
+       while (game_over == false){
             println("Dealer has: "+ dealer_cards + " = " + dealer_score);
             if(dealer_score > 21){
             	println("Player wins!");
@@ -138,7 +142,7 @@ var player_input_to_continue:Boolean = true;
   def main(args: Array[String]): Unit = {
     deal_initial_player_cards();
     deal_initial_dealer_cards();
-    run_game();
+    player_game();
     }
 }
 

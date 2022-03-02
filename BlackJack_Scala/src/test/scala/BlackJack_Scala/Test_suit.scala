@@ -3,7 +3,6 @@ import org.scalatest.FreeSpec
 import scala.collection.mutable.ListBuffer
 
 class BlackJack_Tester extends FreeSpec {
-
   "Test score compute" in {
      assert(test_score_compute == true)
    }
@@ -117,20 +116,15 @@ class BlackJack_Tester extends FreeSpec {
 
    def test_deal_Cards(): Boolean = {
         val old= System.currentTimeMillis(); //measures time at start
-
         Game.deal_initial_player_cards();
         val len1= Game.player_cards.size;
         assert(len1 == 2);
-
         Game.deal_initial_dealer_cards();
         val len2= Game.dealer_cards.size;
-        assert(len2 == 2);
-        
+        assert(len2 == 2);  
         val diff= System.currentTimeMillis() - old; // difference in time
         println("Total time for test_deal_Cards : " + diff + " ms")
         true
     }
-
-
 }
 
