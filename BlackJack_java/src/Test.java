@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -109,7 +110,7 @@ class Test {
 
         long now= System.currentTimeMillis(); // measures time at end
         long diff= now- old; // difference in time
-        System.out.print(diff); //print the execution time
+        System.out.print("test_score_compute time:" + diff); //print the execution time
     }
 
     /*unit tests to check if player and dealer were dealt 2 cards each in the beginning and if those dealt cards were
@@ -131,10 +132,167 @@ class Test {
         deck_len= g.d1.cards.size();
         assertEquals(48,deck_len);
 
-        long now= System.currentTimeMillis(); // measures time at end
-        long diff= now- old; // difference in time
-        System.out.println(diff); //print the execution time
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_deal_cards time:" + diff);
     }
 
+    @org.junit.jupiter.api.Test
+    void test_player_blackjack() {
+        long old= System.currentTimeMillis();
+
+        Game g= new Game();
+        g.d1.cards = new ArrayList<>(Arrays.asList( "7", "7", "7", "7", "7", "7", "7", "7"));
+        g.deal_initial_dealer_cards();
+        g.deal_initial_player_cards();
+        g.compute_score(g.player_cards);
+        g.compute_score(g.dealer_cards);
+        System.out.println("Dealer has: "+g.dealer_cards.get(0) + " ? = ?");
+        System.out.println("Player has: "+ g.player_cards + " = " + g.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("H");
+        String card = g.d1.random_draw();
+        g.player_cards.add(card);
+        g.player_score = g.compute_score(g.player_cards);
+        if(g.player_score == 21){
+            System.out.println("Dealer has: "+g.dealer_cards.get(0) + " ? = ?");
+            System.out.println("Player has: "+ g.player_cards + " = " + g.player_score);
+            System.out.println("Player wins!");
+            System.out.println("Blackjack!");
+        }
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_player_blackjack time:" + diff);
+    }
+
+    @org.junit.jupiter.api.Test
+    void test_player_busts() {
+        long old= System.currentTimeMillis();
+
+        Game g= new Game();
+        g.d1.cards = new ArrayList<>(Arrays.asList( "10", "10", "10", "10", "10", "10", "10", "10"));
+        g.deal_initial_dealer_cards();
+        g.deal_initial_player_cards();
+        g.compute_score(g.player_cards);
+        g.compute_score(g.dealer_cards);
+        System.out.println("Dealer has: "+g.dealer_cards.get(0) + " ? = ?");
+        System.out.println("Player has: "+ g.player_cards + " = " + g.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("H");
+        String card = g.d1.random_draw();
+        g.player_cards.add(card);
+        g.player_score = g.compute_score(g.player_cards);
+        if(g.player_score > 21){
+            System.out.println("Player busts with "+ g.player_cards + " = " + g.player_score);
+            System.out.println("Dealer wins");
+        }
+
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_player_busts time:" + diff);
+    }
+
+    @org.junit.jupiter.api.Test
+    void test_player_tie() {
+        long old= System.currentTimeMillis();
+
+        Game g= new Game();
+        g.d1.cards = new ArrayList<>(Arrays.asList( "10", "10", "10", "10", "10", "10", "10", "10"));
+        g.deal_initial_dealer_cards();
+        g.deal_initial_player_cards();
+        g.compute_score(g.player_cards);
+        g.compute_score(g.dealer_cards);
+        System.out.println("Dealer has: "+g.dealer_cards.get(0) + " ? = ?");
+        System.out.println("Player has: "+ g.player_cards + " = " + g.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ g.player_cards + " = " + g.player_score);
+        g.dealer_game();
+
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_player_tie time:" + diff);
+    }
+
+    @org.junit.jupiter.api.Test
+    void test_dealer_bust() {
+        long old= System.currentTimeMillis();
+
+        Game g= new Game();
+        g.d1.cards = new ArrayList<>(Arrays.asList( "J", "K", "Q","10"));
+        g.player_cards= new ArrayList<>(Arrays.asList( "J", "K"));
+        g.dealer_cards= new ArrayList<>(Arrays.asList( "10", "5"));
+        g.dealer_score = Game.compute_score(g.dealer_cards);
+        g.player_score = Game.compute_score(g.player_cards);
+        System.out.println("Dealer has: "+g.dealer_cards.get(0) + " ? = ?");
+        System.out.println("Player has: "+ g.player_cards + " = " + g.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ g.player_cards + " = " + g.player_score);
+        g.dealer_game();
+
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_dealer_bust time:" + diff);
+    }
+
+    @org.junit.jupiter.api.Test
+    void test_player_stand_win() {
+        long old= System.currentTimeMillis();
+
+        Game g= new Game();
+        g.d1.cards = new ArrayList<>(Arrays.asList( "J", "K", "Q","10"));
+        g.player_cards= new ArrayList<>(Arrays.asList( "J", "K"));
+        g.dealer_cards= new ArrayList<>(Arrays.asList( "10", "8"));
+        g.dealer_score = Game.compute_score(g.dealer_cards);
+        g.player_score = Game.compute_score(g.player_cards);
+        System.out.println("Dealer has: "+g.dealer_cards.get(0) + " ? = ?");
+        System.out.println("Player has: "+ g.player_cards + " = " + g.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ g.player_cards + " = " + g.player_score);
+        g.dealer_game();
+
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_player_stand_win time:" + diff);
+    }
+
+    @org.junit.jupiter.api.Test
+    void test_dealer_stand_win() {
+        long old= System.currentTimeMillis();
+
+        Game g= new Game();
+        g.player_cards= new ArrayList<>(Arrays.asList( "8", "K"));
+        g.dealer_cards= new ArrayList<>(Arrays.asList( "10", "Q"));
+        g.dealer_score = Game.compute_score(g.dealer_cards);
+        g.player_score = Game.compute_score(g.player_cards);
+        System.out.println("Dealer has: "+g.dealer_cards.get(0) + " ? = ?");
+        System.out.println("Player has: "+ g.player_cards + " = " + g.player_score);
+        System.out.println("Would you like to (H)it or (S)tand?");
+        System.out.println("S");
+        System.out.println("Player stands with "+ g.player_cards + " = " + g.player_score);
+        g.dealer_game();
+
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_dealer_stand_win time:" + diff);
+    }
+
+    @org.junit.jupiter.api.Test
+    void test_both_blackjack() {
+        long old= System.currentTimeMillis();
+
+        Game g= new Game();
+        g.player_cards= new ArrayList<>(Arrays.asList( "A", "K"));
+        g.dealer_cards= new ArrayList<>(Arrays.asList( "10", "A"));
+        g.dealer_score = Game.compute_score(g.dealer_cards);
+        g.player_score = Game.compute_score(g.player_cards);
+        g.player_game();
+
+        long now= System.currentTimeMillis();
+        long diff= now- old;
+        System.out.println("test_both_blackjack time:" + diff);
+    }
 }
 

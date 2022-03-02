@@ -67,7 +67,7 @@ class Game extends Deck{
         }
         return sum_cards;
     }
-    public void run_game(){
+    public void player_game(){
         while(player_input_to_continue == true && game_over == false){
             if(player_score == 21){
                 System.out.println("Dealer has: "+dealer_cards.get(0) + " ? = ?");
@@ -98,6 +98,9 @@ class Game extends Deck{
                 }
             }
         }
+        dealer_game();
+    }
+    public void dealer_game(){
         while (game_over == false){
             System.out.println("Dealer has: "+ dealer_cards + " = " + dealer_score);
             if(dealer_score > 21){
@@ -140,6 +143,6 @@ class Main {
         Game g1= new Game();
         g1.deal_initial_player_cards();
         g1.deal_initial_dealer_cards();
-        g1.run_game();
+        g1.player_game();
     }
 }
