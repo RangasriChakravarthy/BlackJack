@@ -211,4 +211,138 @@ public:
         test23();
         test24();
     }
+
+    void test_player_blackjack() {
+        cout << " test_player_blackjack " << endl;
+        g.deck.cards = {"7", "7", "7", "7", "7", "7", "7", "7"};
+        g.deal_initial_dealer_cards();
+        g.deal_initial_player_cards();
+        g.compute_score(g.player_cards);
+        g.compute_score(g.dealer_cards);
+        cout << "Dealer has: "+g.dealer_cards[0] + " ? = ?" ;
+        cout << "Player has : ";
+		g.print_cards(g.player_cards);
+		cout << " = " << g.player_score << " " << endl;
+        cout << "Would you like to (H)it or (S)tand?" << endl;
+        cout << "H" << endl;
+        string card = g.deck.random_draw();
+        g.player_cards.push_back(card);
+        g.player_score = g.compute_score(g.player_cards);
+        if(g.player_score == 21){
+            cout << "Dealer has: "+g.dealer_cards[0] + " ? = ?" ;
+            cout << "Player has : ";
+			g.print_cards(g.player_cards);
+			cout << " = " << g.player_score << " " << endl;
+			cout << "Player wins!!!" << endl;
+			cout << "BlackJack";
+        }
+    }
+
+    void test_player_busts() {
+        cout << " test_player_busts " << endl;
+        g.deck.cards = {"10", "10", "10", "10", "10", "10", "10", "10"};
+        g.deal_initial_dealer_cards();
+        g.deal_initial_player_cards();
+        g.compute_score(g.player_cards);
+        g.compute_score(g.dealer_cards);
+        cout << "Dealer has: "+g.dealer_cards[0] + " ? = ?" ;
+        cout << "Player has : ";
+		g.print_cards(g.player_cards);
+		cout << " = " << g.player_score << " " << endl;
+        cout << "Would you like to (H)it or (S)tand?" << endl;
+        cout << "H" << endl;
+        string card = g.deck.random_draw();
+        g.player_cards.push_back(card);
+        g.player_score = g.compute_score(g.player_cards);
+        if(g.player_score > 21){
+            cout << "Player busts with ";
+			g.print_cards(g.player_cards);
+			cout << " = " << g.player_score << endl;
+			cout << "Dealer wins!!!" << endl;
+        }
+    }
+
+    void test_player_tie() {
+        cout << " test_player_tie " << endl;
+        g.deck.cards = {"10", "10", "10", "10", "10", "10", "10", "10"};
+        g.deal_initial_dealer_cards();
+        g.deal_initial_player_cards();
+        g.compute_score(g.player_cards);
+        g.compute_score(g.dealer_cards);
+        cout << "Dealer has: "+g.dealer_cards[0] + " ? = ?" ;
+        cout << "Player has : ";
+		g.print_cards(g.player_cards);
+		cout << " = " << g.player_score << " " << endl;
+        cout << "Would you like to (H)it or (S)tand?" << endl;
+        cout << "S" << endl;
+        cout << "Player stands with " ;
+        g.print_cards(g.player_cards);
+        cout << " = " + g.player_score << " " << endl;
+        g.dealer_game();
+    }
+
+    void test_dealer_bust() {
+        cout << " test_dealer_bust " << endl;
+        g.deck.cards = {"J", "K", "Q","10"};
+        g.player_cards= {"J", "K"};
+        g.dealer_cards= {"10", "5"};
+        g.dealer_score = g.compute_score(g.dealer_cards);
+        g.player_score = g.compute_score(g.player_cards);
+        cout << "Dealer has: "+g.dealer_cards[0] + " ? = ?" ;
+        cout << "Player has : ";
+		g.print_cards(g.player_cards);
+		cout << " = " << g.player_score << " " << endl;
+        cout << "Would you like to (H)it or (S)tand?" << endl;
+        cout << "S" << endl;
+        cout << "Player stands with " ;
+        g.print_cards(g.player_cards);
+        cout << " = " + g.player_score << " " << endl;
+        g.dealer_game();
+    }
+
+    void test_player_stand_win() {
+        cout << " test_player_stand_win " << endl;
+        g.deck.cards = {"J", "K", "Q","10"};
+        g.player_cards= {"J", "K"};
+        g.dealer_cards= {"10", "8"};
+        g.dealer_score = g.compute_score(g.dealer_cards);
+        g.player_score = g.compute_score(g.player_cards);
+        cout << "Dealer has: "+g.dealer_cards[0] + " ? = ?" << endl;
+        cout << "Player has : ";
+		g.print_cards(g.player_cards);
+		cout << " = " << g.player_score << " " << endl;
+        cout << "Would you like to (H)it or (S)tand?" << endl;
+        cout << "S" << endl;
+        cout << "Player stands with " ;
+        g.print_cards(g.player_cards);
+        cout << " = " + g.player_score << " " << endl;
+        g.dealer_game();
+    }
+
+    void test_dealer_stand_win() {
+        cout << " test_dealer_stand_win " << endl;
+        g.player_cards= {"8", "K"};
+        g.dealer_cards= {"10", "Q"};
+        g.dealer_score = g.compute_score(g.dealer_cards);
+        g.player_score = g.compute_score(g.player_cards);
+        cout << "Dealer has: "+g.dealer_cards[0] + " ? = ?"  << endl;
+        cout << "Player has : ";
+		g.print_cards(g.player_cards);
+		cout << " = " << g.player_score << " " << endl;
+        cout << "Would you like to (H)it or (S)tand?" << endl;
+        cout << "S" << endl;
+        cout << "Player stands with " ;
+        g.print_cards(g.player_cards);
+        cout << " = " + g.player_score << " " << endl;
+        g.dealer_game();
+    }
+
+    void test_both_blackjack() {
+        cout << " test_both_blackjack " << endl;
+        g.player_cards=  {"A", "K"};
+        g.dealer_cards=  {"10", "A"};
+        g.dealer_score = g.compute_score(g.dealer_cards);
+        g.player_score = g.compute_score(g.player_cards);
+        g.player_game();
+    }
 };

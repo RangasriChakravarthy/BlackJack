@@ -1,7 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:122:41: Int does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m        val len1= Game.player_cards.size();[0m
-[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
-[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:126:41: Int does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m        val len2= Game.dealer_cards.size();[0m
-[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:169:16: value card is not a member of object String[0m
+[0m[[0m[31merror[0m] [0m[0m        String card = Deck.random_draw();[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:170:30: not found: value card[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_cards += card[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
 [0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
