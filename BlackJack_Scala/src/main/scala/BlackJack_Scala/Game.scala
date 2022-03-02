@@ -10,12 +10,12 @@ object Deck {
 //						   		("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
 //						   		("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"))
 
-var ordered_cards:ListBuffer[String] = ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+var cards:ListBuffer[String] = ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10",
 								"A", "K", "Q", "J", "2", "3", "4", "5", "6")
 						   	
  def random_draw(): String = {
-   var card = Random.shuffle(ordered_cards).head
-   ordered_cards.remove(0)
+   var card = Random.shuffle(cards).head
+   cards.remove(0)
    card  
   }
 }
