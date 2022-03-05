@@ -1,4 +1,4 @@
-//package BlackJack_Scala
+package BlackJack_Scala
 import scala.collection.mutable.ListBuffer
 import scala.io.StdIn.readLine
 import scala.util.Random

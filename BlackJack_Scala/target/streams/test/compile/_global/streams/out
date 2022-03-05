@@ -1,7 +1,301 @@
-[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:169:16: value card is not a member of object String[0m
-[0m[[0m[31merror[0m] [0m[0m        String card = Deck.random_draw();[0m
-[0m[[0m[31merror[0m] [0m[0m               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:170:30: not found: value card[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:279:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_cards = ListBuffer("A", "K")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:280:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_cards = ListBuffer("10", "A")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:281:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_score = Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:282:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_score = Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:283:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_game();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:262:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_cards= ListBuffer( "8", "K")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:263:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_cards= ListBuffer( "10", "Q")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:264:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_score = Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:265:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_score = Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:266:43: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:267:44: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:267:72: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:270:51: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:270:79: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:271:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_game();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:244:9: not found: value Deck[0m
+[0m[[0m[31merror[0m] [0m[0m        Deck.cards = ListBuffer("J", "K", "Q","10")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:245:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_cards= ListBuffer( "J", "K")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:246:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_cards= ListBuffer( "10", "8")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:247:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_score = Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:248:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_score = Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:249:43: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:250:44: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:250:72: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:253:51: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:253:79: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:254:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_game();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:226:9: not found: value Deck[0m
+[0m[[0m[31merror[0m] [0m[0m        Deck.cards = ListBuffer( "J", "K", "Q","10")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:227:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_cards= ListBuffer( "J", "K")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:228:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_cards= ListBuffer( "10", "5")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:229:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_score = Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:230:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_score = Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:231:43: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:232:44: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:232:72: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:235:51: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:235:79: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:236:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_game();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:208:9: not found: value Deck[0m
+[0m[[0m[31merror[0m] [0m[0m        Deck.cards = ListBuffer( "10", "10", "10", "10", "10", "10", "10", "10")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:209:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.deal_initial_dealer_cards();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:210:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.deal_initial_player_cards();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:211:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:211:28: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:212:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:212:28: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:213:43: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:214:44: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:214:72: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:217:51: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:217:79: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player stands with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:218:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.dealer_game();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:185:9: not found: value Deck[0m
+[0m[[0m[31merror[0m] [0m[0m        Deck.cards = ListBuffer( "10", "10", "10", "10", "10", "10", "10", "10")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:186:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.deal_initial_dealer_cards();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:187:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.deal_initial_player_cards();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:188:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:188:28: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:189:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:189:28: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:190:43: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:191:44: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:191:72: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:194:20: not found: value Deck[0m
+[0m[[0m[31merror[0m] [0m[0m        val card = Deck.random_draw();[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:195:9: not found: value Game[0m
 [0m[[0m[31merror[0m] [0m[0m        Game.player_cards += card[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:196:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_score = Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:197:12: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        if(Game.player_score > 21){[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:198:54: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m            System.out.println("Player busts with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:198:82: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m            System.out.println("Player busts with "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:160:9: not found: value Deck[0m
+[0m[[0m[31merror[0m] [0m[0m        Deck.cards = ListBuffer( "7", "7", "7", "7", "7", "7", "7", "7")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:161:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.deal_initial_dealer_cards();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:162:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.deal_initial_player_cards();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:163:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:163:28: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:164:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:164:28: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.compute_score(Game.dealer_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:165:43: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:166:44: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:166:72: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:169:20: not found: value Deck[0m
+[0m[[0m[31merror[0m] [0m[0m        val card = Deck.random_draw();[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:170:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_cards += card[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:171:9: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        Game.player_score = Game.compute_score(Game.player_cards);[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:172:12: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m        if(Game.player_score == 21){[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:173:47: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m            System.out.println("Dealer has: "+Game.dealer_cards(0) + " ? = ?");[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:174:48: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m            System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:174:76: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m            System.out.println("Player has: "+ Game.player_cards + " = " + Game.player_score);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:46:12: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(Game.compute_score(card1) == 13)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:50:12: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(Game.compute_score(card2) == 14)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:54:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card3) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:58:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card4) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:62:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card5) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:66:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card6) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:70:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card7) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:74:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card8) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:78:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card9) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:82:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card10) == 21)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:86:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card11) == 19)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:90:12: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(Game.compute_score(card12) == 20)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:94:12: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(Game.compute_score(card13) == 20)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:98:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card14) == 20)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:102:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card15) == 20)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:106:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card16) == 23)   [0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/soe/pinks/BlackJack/BlackJack_Scala/src/test/scala/BlackJack_Scala/Test_suit.scala:110:13: not found: value Game[0m
+[0m[[0m[31merror[0m] [0m[0m     assert(Game.compute_score(card17) == 23)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m100 errors found[0m
