@@ -6,16 +6,15 @@ import scala.util.Random
 
 object Deck {
 
-//var ordered_cards:ListBuffer[ListBuffer[String]] = (("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"),("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
-//						   		("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
-//						   		("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"))
+var ordered_cards:ListBuffer[ListBuffer[String]] = ListBuffer(ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+                                ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+						   		ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+						   		ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10"))
 
-var cards:ListBuffer[String] = ListBuffer("A", "K", "Q", "J", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-								"A", "K", "Q", "J", "2", "3", "4", "5", "6")
-						   	
+					   	
  def random_draw(): String = {
-   var card = Random.shuffle(cards).head
-   cards.remove(0)
+   var card = Random.shuffle(ordered_cards(0)).head
+   ordered_cards(0).remove(0)
    card  
   }
 }
