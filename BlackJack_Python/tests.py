@@ -113,7 +113,7 @@ class TestBlackjack(unittest.TestCase):
         runtime = new - old
         print(runtime.microseconds / 1000)
 
-    def test_dealt_two_cards(self):
+    def test_deal_cards(self):
         """
         unit tests to check if player and dealer were dealt 2 cards each in the beginning and if those dealt cards were
         removed from the total deck of cards.
@@ -142,8 +142,10 @@ class TestBlackjack(unittest.TestCase):
 
     '''mocking scenarios: creating exact scenarios to mimic the game, to get specific results'''
 
-    @mock.patch('builtins.input', side_effect=['H'])  # setting what action the player will take. In this case, player hits once
-    @mock.patch("deck.shuffle_cards", return_value=['7'] * 7)  # modifying the deck of cards to have only the card 7, 7 times, so that only 7 is returned every time a card is drawn
+    @mock.patch('builtins.input',
+                side_effect=['H'])  # setting what action the player will take. In this case, player hits once
+    @mock.patch("deck.shuffle_cards", return_value=[
+                                                       '7'] * 7)  # modifying the deck of cards to have only the card 7, 7 times, so that only 7 is returned every time a card is drawn
     def test_player_blackjack(self, mock_shuffle, mock_input):
         old = datetime.now()  # to capture time before start
 
